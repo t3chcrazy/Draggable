@@ -23,8 +23,8 @@ function Draggable({ config, index = 0 }) {
         if (isClicked) {
             e.preventDefault()
             const containerStyle = getComputedStyle(node.current)
-            let leftValue = parseInt(containerStyle.left);
-            let topValue = parseInt(containerStyle.top);
+            const leftValue = parseInt(containerStyle.left);
+            const topValue = parseInt(containerStyle.top);
             let offsetX = leftValue+e.movementX
             let offsetY = topValue+e.movementY
             if (leftValue+e.movementX < -dragOffset.current.left) {
@@ -44,15 +44,11 @@ function Draggable({ config, index = 0 }) {
         }
     }
 
-    const handleMouseDown = () => {
-        setIsClicked(true)
-    }
-
     return (
         <div ref={node} className="box">
             <button
                 className="header"
-                onMouseDown={handleMouseDown}
+                onMouseDown={setClickedState(true)}
                 onMouseUp={setClickedState(false)}
                 onMouseLeave={setClickedState(false)}
                 onMouseMoveCapture={handleMove}

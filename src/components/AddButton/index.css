@@ -14,7 +14,9 @@
   margin: 0;
   outline: none;
   padding: 10px 16px;
-  position: relative;
+  position: absolute;
+  top: 20px;
+  left: 20px;
   text-align: center;
   text-decoration: none;
   transition: color 100ms;

@@ -5,4 +5,4 @@
 - Install modules using `npm install`
 - Run the project using `npm run dev`
 - Demo
-![Alt Text](./demo.gif)
+![Demo gif](./demo.gif)
